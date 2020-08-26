@@ -1,0 +1,53 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:clickable="true"
+    android:elevation="@dimen/card_elevation"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--suppress AndroidLintContentDescription -->
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/title_padding"
+            android:paddingRight="@dimen/title_padding"
+            android:paddingBottom="@dimen/title_bottom_padding"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            tools:text="My Story of Climbing a Mountain" />
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/subtitle_padding"
+            android:paddingRight="@dimen/subtitle_padding"
+            android:paddingBottom="@dimen/subtitle_padding"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="Tom Brokaw" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
